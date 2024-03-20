@@ -12,9 +12,11 @@ export default function Home() {
 
       <TouchButton route="Profile" title="Go to Profile" data={user} />
 
-      <TouchButton route="Category" title="Go to Category" />
+      <TouchButton route="Planets" title="Go to Planets" />
 
       <TouchButton route="Users" title="Go to Users" />
+
+      <TouchButton route="UsersList" title="Go to Users List" />
     </View>
   );
 }

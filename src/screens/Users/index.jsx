@@ -85,7 +85,7 @@ export default function Users() {
         )}
       </View>
 
-      <TouchButton route="Category" title="Go to Category" />
+      <TouchButton route="Planets" title="Go to Planets" />
       <TouchButton route="Profile" title="Go to Profile" data={user} />
     </View>
   );
