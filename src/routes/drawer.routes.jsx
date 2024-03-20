@@ -5,6 +5,7 @@ import Home from "../screens/Home";
 import Profile from "../screens/Profile";
 import Category from "../screens/Category";
 import { user } from "../data/Profile";
+import Planets from "../screens/Planets";
 
 const Drawer = createDrawerNavigator();
 
@@ -47,18 +48,19 @@ const DrawerRoutes = () => {
         }}
       />
       <Drawer.Screen
-        name="Category"
-        component={Category}
+        name="Planets"
+        component={Planets}
+        initialParams={{ data: user }}
         options={{
           headerTitle: "",
           drawerIcon: ({ focused }) => (
             <Feather
-              name="list"
+              name="globe"
               size={24}
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
-          drawerLabel: "Categorias",
+          drawerLabel: "Planetas",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}
