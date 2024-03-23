@@ -71,12 +71,13 @@ export default function Form({ route }) {
         onChangeText={setName}
         value={name}
       />
-      <TextInput
-        placeholder="Digite a data do usuário"
-        style={styles.planetInput}
-        onChangeText={setDate}
-        value={date}
-      />
+       <TextInput
+          style={styles.input}
+          placeholder="Date"
+          value={date}
+          onChangeText={setDate}
+          keyboardType="numeric"
+        />
       <TextInput
         placeholder="Digite a cor primária do usuário"
         style={styles.planetInput}

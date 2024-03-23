@@ -1,7 +1,7 @@
 export default class Planet {
   constructor(
     name,
-    date,
+    date = new Date(),
     primaryColor,
     secondaryColor,
     population,

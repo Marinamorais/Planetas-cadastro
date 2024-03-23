@@ -27,7 +27,9 @@ export default function Planets() {
         <View style={styles.planetList}>
           {allPlanets.map((planet) => (
             <View key={planet.id} style={styles.planetItem}>
-                
+              <View>
+                <Text style={styles.planetId}>{planet.id}</Text>
+              </View>
               <View>
                 <Text style={styles.planetName}>{planet.name}</Text>
               </View>
@@ -53,7 +55,9 @@ export default function Planets() {
                 <TouchableOpacity
                   style={styles.detailsButton}
                   onPress={() => navigation.navigate("Profile", { data: planet })}
+
                 >
+                
                   <Text>Detalhes</Text>
                 </TouchableOpacity>
               </View>

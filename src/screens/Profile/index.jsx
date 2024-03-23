@@ -51,6 +51,7 @@ export default function Profile({ route }) {
         <View style={styles.planetDetail}>
           <Text style={styles.planetRuler}>{data.ruler}</Text>
         </View>
+         
         <View style={styles.planetActions}>
           <TouchableOpacity style={styles.editButton} onPress={editPlanet}>
             <Text>Editar</Text>
