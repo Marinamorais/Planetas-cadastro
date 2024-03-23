@@ -1,9 +1,10 @@
-export const user = {
-  name: "Marina",
-  email: "Marina@dev.com",
-  phone: "1999999999",
-  address: {
-    city: "Valinhos",
-    state: "São Paulo",
-  },
+export const planet = {
+  id: 1513,
+  name: "Terra",
+  date: "20/09/2001",
+  primaryColor: "Azul",
+  secondaryColor: "Rosa",
+  population: "1",
+  localization: "Brasil",
+  ruler: "Thayná",
 };

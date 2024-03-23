@@ -1,7 +1,11 @@
-export default class PlanetRepository {
+import { planet } from "../../data/Profile";
+import Planet from "./Planet";
+
+class PlanetsRepository {
   constructor() {
     this.planets = [];
   }
+
   getAll() {
     return this.planets;
   }
@@ -10,32 +14,41 @@ export default class PlanetRepository {
     return this.planets.find((planet) => planet.id === id);
   }
 
-  add(planet) {
-    this.planets.push(planet);
+  add(newPlanet) {
+    this.planets.push(newPlanet);
   }
+
   remove(id) {
     this.planets = this.planets.filter((planet) => planet.id !== id);
   }
-  update(
-    id,
-    name,
-    date,
-    PrimaryColor,
-    SecondaryColor,
-    Population,
-    Localization,
-    Ruler
-  ) {
+
+  update(id, name, date, primaryColor, secondaryColor, population, localization, ruler) {
     const planet = this.get(id);
+
     if (planet) {
       planet.name = name;
       planet.date = date;
-      planet.PrimaryColor = PrimaryColor;
-      planet.SecondaryColor = SecondaryColor;
-      planet.Population = Population;
-      planet.Localization = Localization;
-      planet.Ruler = Ruler;
+      planet.primaryColor = primaryColor;
+      planet.secondaryColor = secondaryColor;
+      planet.population = population;
+      planet.localization = localization;
+      planet.ruler = ruler;
     }
     return planet;
   }
 }
+
+const planetsRepository = new PlanetsRepository();
+const newPlanet = new Planet(
+  planet.name,
+  planet.date,
+  planet.primaryColor,
+  planet.secondaryColor,
+  planet.population,
+  planet.localization,
+  planet.ruler,
+);
+
+planetsRepository.add(newPlanet);
+
+export default planetsRepository;
