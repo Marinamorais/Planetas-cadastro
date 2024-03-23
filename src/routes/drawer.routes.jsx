@@ -3,9 +3,8 @@ import { Feather } from "@expo/vector-icons";
 
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
-import Category from "../screens/Category";
-import { user } from "../data/Profile";
-import Planets from "../screens/Planets";
+import Form from "../screens/Form";
+import { planet } from "../data/Profile";
 
 const Drawer = createDrawerNavigator();
 
@@ -32,12 +31,12 @@ const DrawerRoutes = () => {
       <Drawer.Screen
         name="Profile"
         component={Profile}
-        initialParams={{ data: user }}
+        initialParams={{ data: planet }}
         options={{
           headerTitle: "",
           drawerIcon: ({ focused }) => (
             <Feather
-              name="user"
+              name="planet"
               size={24}
               color={focused ? "#131313" : "#D6D6D6"}
             />
@@ -48,19 +47,18 @@ const DrawerRoutes = () => {
         }}
       />
       <Drawer.Screen
-        name="Planets"
-        component={Planets}
-        initialParams={{ data: user }}
+        name="Form"
+        component={Form}
         options={{
           headerTitle: "",
           drawerIcon: ({ focused }) => (
             <Feather
-              name="globe"
+              name="list"
               size={24}
               color={focused ? "#131313" : "#D6D6D6"}
             />
           ),
-          drawerLabel: "Planetas",
+          drawerLabel: "Categorias",
           drawerActiveTintColor: "#131313",
           drawerInactiveTintColor: "#D6D6D6",
         }}
