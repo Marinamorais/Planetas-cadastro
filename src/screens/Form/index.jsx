@@ -9,15 +9,15 @@ import planetsRepository from "../../models/planet/PlanetRepository";
 import Planet from "../../models/planet/Planet";
 
 export default function Form({ route }) {
-  let { planet, edit } = route.params;
+  const { planet, edit } = route.params;
 
   const [name, setName] = useState("");
-  const [date , setDate] = useState("");
-  const [ primarycore , setPrimarycore] = useState("");
-  const [secondarycore , setSecondarycore] = useState("");
-  const [population , setPopulation] = useState("");
-  const [localization , setLocalization] = useState("");
-  const [ruler , setRuler] = useState("");
+  const [date, setDate] = useState("");
+  const [primarycore, setPrimarycore] = useState("");
+  const [secondarycore, setSecondarycore] = useState("");
+  const [population, setPopulation] = useState("");
+  const [localization, setLocalization] = useState("");
+  const [ruler, setRuler] = useState("");
 
   const [isUpdate, setIsUpdate] = useState(edit);
 
@@ -40,10 +40,25 @@ export default function Form({ route }) {
 
   const handlePlanetAction = () => {
     if (isUpdate) {
-      planetsRepository.update(planet.id, name, primarycore, secondarycore, population, localization, ruler);
+      planetsRepository.update(
+        planet.id,
+        name,
+        primarycore,
+        secondarycore,
+        population,
+        localization,
+        ruler
+      );
       clearInputs();
     } else {
-      const newPlanet = new Planet(name, primarycore, secondarycore, population, localization, ruler);
+      const newPlanet = new Planet(
+        name,
+        primarycore,
+        secondarycore,
+        population,
+        localization,
+        ruler
+      );
       planetsRepository.add(newPlanet);
       clearInputs();
     }
@@ -52,9 +67,8 @@ export default function Form({ route }) {
 
   const clearInputs = () => {
     setIsUpdate(false);
-    edit = false;
     setName("");
-    setDate("");
+    setDate(""); // Limpar data ao cancelar edição ou após salvar
     setPrimarycore("");
     setSecondarycore("");
     setPopulation("");
@@ -64,52 +78,52 @@ export default function Form({ route }) {
 
   return (
     <View style={styles.container}>
-      <Title title={isUpdate ? "Editar Usuário" : "Novo Usuário"} />
+      <Title title={isUpdate ? "Editar Planeta" : "Novo Planeta"} />
       <TextInput
-        placeholder="Digite o nome do usuário"
+        placeholder="Digite o nome do planeta"
         style={styles.planetInput}
         onChangeText={setName}
         value={name}
       />
-       <TextInput
-          style={styles.input}
-          placeholder="Date"
-          value={date}
-          onChangeText={setDate}
-          keyboardType="numeric"
-        />
       <TextInput
-        placeholder="Digite a cor primária do usuário"
+        style={styles.planetInput}
+        placeholder="Digite a data do planeta (AAAA-MM-DD)"
+        value={date}
+        onChangeText={setDate}
+        keyboardType="numeric"
+      />
+      <TextInput
+        placeholder="Digite a cor primária do planeta"
         style={styles.planetInput}
         onChangeText={setPrimarycore}
         value={primarycore}
       />
       <TextInput
-        placeholder="Digite a cor secundária do usuário"
+        placeholder="Digite a cor secundária do planeta"
         style={styles.planetInput}
         onChangeText={setSecondarycore}
         value={secondarycore}
       />
       <TextInput
-        placeholder="Digite a população do usuário"
+        placeholder="Digite a população do planeta"
         style={styles.planetInput}
         onChangeText={setPopulation}
         value={population}
       />
       <TextInput
-        placeholder="Digite a localização do usuário"
+        placeholder="Digite a localização do planeta"
         style={styles.planetInput}
         onChangeText={setLocalization}
         value={localization}
       />
       <TextInput
-        placeholder="Digite o governante do usuário"
+        placeholder="Digite o governante do planeta"
         style={styles.planetInput}
         onChangeText={setRuler}
         value={ruler}
       />
       <TouchableOpacity style={styles.button} onPress={handlePlanetAction}>
-        <Text>{isUpdate ? "Salvar Alterações" : "Criar Usuário"}</Text>
+        <Text>{isUpdate ? "Salvar Alterações" : "Criar Planeta"}</Text>
       </TouchableOpacity>
 
       {isUpdate && (
@@ -120,3 +134,5 @@ export default function Form({ route }) {
     </View>
   );
 }
+
+
