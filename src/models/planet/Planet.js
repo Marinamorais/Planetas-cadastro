@@ -1,7 +1,7 @@
 export default class Planet {
   constructor(
     name,
-    date = new Date(),
+    date,
     primaryColor,
     secondaryColor,
     population,
@@ -18,6 +18,8 @@ export default class Planet {
   }
   generateId() {
     return Math.floor(Math.random() * 1000);
+
+    
   }
-  
+
 }

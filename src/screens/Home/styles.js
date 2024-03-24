@@ -6,11 +6,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 50,
   },
-  button: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#C9D4FF",
-    borderRadius: 5,
+  backgroundGradient: {
+    flex: 1,
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#451952",
+  },
+  descri: {
+    margin: 10,
+    alignItems: "center",
+  },
+  text02: {
+    fontSize: 15,
+    color: "#333",
+    textAlign: "center",
   },
 });
 

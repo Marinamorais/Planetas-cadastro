@@ -1,5 +1,5 @@
 export const planet = {
-  id: 1513,
+
   name: "Terra",
   date: "20/09/2001",
   primaryColor: "Azul",
