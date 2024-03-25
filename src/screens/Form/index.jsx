@@ -43,6 +43,7 @@ export default function Form({ route }) {
       planetsRepository.update(
         planet.id,
         name,
+        date,
         primarycore,
         secondarycore,
         population,
@@ -53,6 +54,7 @@ export default function Form({ route }) {
     } else {
       const newPlanet = new Planet(
         name,
+        date,
         primarycore,
         secondarycore,
         population,
@@ -68,7 +70,8 @@ export default function Form({ route }) {
   const clearInputs = () => {
     setIsUpdate(false);
     setName("");
-    setDate(""); // Limpar data ao cancelar edição ou após salvar
+    setDate("");
+
     setPrimarycore("");
     setSecondarycore("");
     setPopulation("");
@@ -87,7 +90,7 @@ export default function Form({ route }) {
       />
       <TextInput
         style={styles.planetInput}
-        placeholder="Digite a data do planeta (AAAA-MM-DD)"
+        placeholder="Digite a data"
         value={date}
         onChangeText={setDate}
         keyboardType="numeric"
