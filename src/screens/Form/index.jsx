@@ -13,8 +13,8 @@ export default function Form({ route }) {
 
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
-  const [primarycore, setPrimarycore] = useState("");
-  const [secondarycore, setSecondarycore] = useState("");
+  const [primaryColor, setPrimaryColor] = useState("");
+  const [secondaryColor, setSecondaryColor] = useState("");
   const [population, setPopulation] = useState("");
   const [localization, setLocalization] = useState("");
   const [ruler, setRuler] = useState("");
@@ -27,8 +27,8 @@ export default function Form({ route }) {
     if (edit) {
       setName(planet.name);
       setDate(planet.date);
-      setPrimarycore(planet.primarycore);
-      setSecondarycore(planet.secondarycore);
+      setPrimaryColor(planet.primaryColor);
+      setSecondaryColor(planet.secondaryColor);
       setPopulation(planet.population);
       setLocalization(planet.localization);
       setRuler(planet.ruler);
@@ -44,19 +44,20 @@ export default function Form({ route }) {
         planet.id,
         name,
         date,
-        primarycore,
-        secondarycore,
+        primaryColor,
+        secondaryColor,
         population,
         localization,
         ruler
       );
+
       clearInputs();
     } else {
       const newPlanet = new Planet(
         name,
         date,
-        primarycore,
-        secondarycore,
+        primaryColor,
+        secondaryColor,
         population,
         localization,
         ruler
@@ -71,8 +72,8 @@ export default function Form({ route }) {
     setIsUpdate(false);
     setName("");
     setDate("");
-    setPrimarycore("");
-    setSecondarycore("");
+    setPrimaryColor("");
+    setSecondaryColor("");
     setPopulation("");
     setLocalization("");
     setRuler("");
@@ -89,7 +90,7 @@ export default function Form({ route }) {
       />
       <TextInput
         style={styles.planetInput}
-        placeholder="Digite a data"
+        placeholder="Digite a data do planeta (AAAA-MM-DD)"
         value={date}
         onChangeText={setDate}
         keyboardType="numeric"
@@ -97,14 +98,14 @@ export default function Form({ route }) {
       <TextInput
         placeholder="Digite a cor primária do planeta"
         style={styles.planetInput}
-        onChangeText={setPrimarycore}
-        value={primarycore}
+        onChangeText={setPrimaryColor}
+        value={primaryColor}
       />
       <TextInput
         placeholder="Digite a cor secundária do planeta"
         style={styles.planetInput}
-        onChangeText={setSecondarycore}
-        value={secondarycore}
+        onChangeText={setSecondaryColor}
+        value={secondaryColor}
       />
       <TextInput
         placeholder="Digite a população do planeta"
