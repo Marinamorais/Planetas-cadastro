@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   detailsButton: {
     padding: 5,
     borderRadius: 5,
-    backgroundColor: "#ADD8E6",
+    backgroundColor: "#2196F3",
     minWidth: 70,
     alignItems: "center",
   },

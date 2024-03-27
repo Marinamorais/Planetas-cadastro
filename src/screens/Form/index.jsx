@@ -1,4 +1,4 @@
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React, { useState, useEffect } from "react";
 
@@ -80,60 +80,69 @@ export default function Form({ route }) {
   };
 
   return (
-    <View style={styles.container}>
-      <Title title={isUpdate ? "Editar Planeta" : "Novo Planeta"} />
-      <TextInput
-        placeholder="Digite o nome do planeta"
-        style={styles.planetInput}
-        onChangeText={setName}
-        value={name}
+    <View style={styles.fundo}>
+      <Image
+        style={styles.imagemfundo}
+        source={require("../../../assets/fundo05.png")}
       />
-      <TextInput
-        style={styles.planetInput}
-        placeholder="Digite a data do planeta (AAAA-MM-DD)"
-        value={date}
-        onChangeText={setDate}
-        keyboardType="numeric"
-      />
-      <TextInput
-        placeholder="Digite a cor primária do planeta"
-        style={styles.planetInput}
-        onChangeText={setPrimaryColor}
-        value={primaryColor}
-      />
-      <TextInput
-        placeholder="Digite a cor secundária do planeta"
-        style={styles.planetInput}
-        onChangeText={setSecondaryColor}
-        value={secondaryColor}
-      />
-      <TextInput
-        placeholder="Digite a população do planeta"
-        style={styles.planetInput}
-        onChangeText={setPopulation}
-        value={population}
-      />
-      <TextInput
-        placeholder="Digite a localização do planeta"
-        style={styles.planetInput}
-        onChangeText={setLocalization}
-        value={localization}
-      />
-      <TextInput
-        placeholder="Digite o governante do planeta"
-        style={styles.planetInput}
-        onChangeText={setRuler}
-        value={ruler}
-      />
-      <TouchableOpacity style={styles.button} onPress={handlePlanetAction}>
-        <Text>{isUpdate ? "Salvar Alterações" : "Criar Planeta"}</Text>
-      </TouchableOpacity>
-
-      {isUpdate && (
-        <TouchableOpacity style={styles.button} onPress={clearInputs}>
-          <Text>Cancelar Edição</Text>
+      <View style={styles.container}>
+        <Title
+          style={styles.title}
+          title={isUpdate ? "Editar Planeta" : "Novo Planeta"}
+        />
+        <TextInput
+          placeholder="Digite o nome do planeta"
+          style={styles.planetInput}
+          onChangeText={setName}
+          value={name}
+        />
+        <TextInput
+          style={styles.planetInput}
+          placeholder="Digite a data do planeta (AAAA-MM-DD)"
+          value={date}
+          onChangeText={setDate}
+          keyboardType="numeric"
+        />
+        <TextInput
+          placeholder="Digite a cor primária do planeta"
+          style={styles.planetInput}
+          onChangeText={setPrimaryColor}
+          value={primaryColor}
+        />
+        <TextInput
+          placeholder="Digite a cor secundária do planeta"
+          style={styles.planetInput}
+          onChangeText={setSecondaryColor}
+          value={secondaryColor}
+        />
+        <TextInput
+          placeholder="Digite a população do planeta"
+          style={styles.planetInput}
+          onChangeText={setPopulation}
+          value={population}
+        />
+        <TextInput
+          placeholder="Digite a localização do planeta"
+          style={styles.planetInput}
+          onChangeText={setLocalization}
+          value={localization}
+        />
+        <TextInput
+          placeholder="Digite o governante do planeta"
+          style={styles.planetInput}
+          onChangeText={setRuler}
+          value={ruler}
+        />
+        <TouchableOpacity style={styles.button} onPress={handlePlanetAction}>
+          <Text>{isUpdate ? "Salvar Alterações" : "Criar Planeta"}</Text>
         </TouchableOpacity>
-      )}
+
+        {isUpdate && (
+          <TouchableOpacity style={styles.button} onPress={clearInputs}>
+            <Text>Cancelar Edição</Text>
+          </TouchableOpacity>
+        )}
+      </View>
     </View>
   );
 }

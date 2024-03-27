@@ -6,43 +6,32 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 50,
   },
-  button: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#C9D4FF",
-    borderRadius: 5,
-  },
-  user: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: "#C9D4FF",
-    borderRadius: 5,
-  },
-  userDetail: {
-    marginBottom: 10,
-  },
-  userActions: {
-    flexDirection: "row",
-    gap: 10,
-    justifyContent: "center",
-  },
-  editButton: {
-    padding: 5,
-    borderRadius: 5,
-    backgroundColor: "#4CAF50",
-    marginRight: 5,
-    minWidth: 70,
-    alignItems: "center",
-  },
-  deleteButton: {
-    padding: 5,
-    borderRadius: 5,
-    backgroundColor: "#FF6347",
-    minWidth: 70,
-    alignItems: "center",
-  },
   text: {
-    fontSize: 16,
+    marginTop: 20,
+    fontSize: 20,
+    fontWeight: "medium",
+    color: "#FFF",
+  },
+  containerimg: {
+    marginTop: 20,
+    height: 150,
+    width: 150,
+    borderRadius: 75,
+    borderColor: "#000",
+  },
+  imagem: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    borderColor: "#000",
+    borderWidth: 1,
+  },
+  imagemfundo: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    position: "absolute",
   },
 });
 

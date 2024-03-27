@@ -12,7 +12,6 @@ export default function Home() {
           source={require("../../../assets/fundo01.png")}
         />
         <Header />
-
         <View style={styles.descri}>
           <Text style={styles.text02}>
             O sistema solar sempre foi um dos assuntos mais fascinantes para

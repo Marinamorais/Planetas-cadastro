@@ -1,25 +1,35 @@
-import { Text, View } from "react-native";
+import { Text, View, Image } from "react-native";
 
 import styles from "./styles";
-import Title from "../../components/Title";
 
+import Header from "../../components/Header";
 
-
-export default function Profile(){
-   return (
+export default function Profile() {
+  return (
     <View style={styles.container}>
-      <Title title="Profile" />
-      <Text>Nome: Thayná</Text>
-      <Text>Data de Nascimento: 20/09/2001</Text>
-      <Text>Cor Primária: Azul</Text>
-      <Text>Cor Secundária: Rosa</Text>
-      <Text>População: 1</Text>
-      <Text>Localização: Brasil</Text>
-      <Text>Regente: Thayná</Text>
+      <Image
+        style={styles.imagemfundo}
+        source={require("../../../assets/fundo04.png")}
+      />
+      <Header />
+
+      <Text style={styles.text}>Marina Elis de Morais🌌</Text>
+      <View style={styles.containerimg}>
+        <Image
+          style={styles.imagem}
+          source={require("../../../assets/marina.png")}
+        />
+      </View>
+      <View style={styles.containercard}>
+        <View style={styles.card}>
+          <Text style={styles.textcard}>
+            Estudante de Desenvolvimento de Sistmas
+          </Text>
+        </View>
+        <View style={styles.card}>
+          <Text style={styles.textcard}></Text>
+        </View>
+      </View>
     </View>
   );
 }
-
-
- 
-

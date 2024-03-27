@@ -6,7 +6,8 @@ export default class Planet {
     secondaryColor,
     population,
     localization,
-    ruler) {
+    ruler
+  ) {
     this.id = this.generateId();
     this.name = name;
     this.date = date;
@@ -18,8 +19,5 @@ export default class Planet {
   }
   generateId() {
     return Math.floor(Math.random() * 1000);
-
-    
   }
-
 }
