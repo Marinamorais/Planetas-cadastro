@@ -1,4 +1,4 @@
-import { Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView, Image } from "react-native";
 import styles from "./styles";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
@@ -7,10 +7,12 @@ export default function Home() {
   return (
     <ScrollView>
       <View style={styles.container}>
+        <Image
+          style={styles.image}
+          source={require("../../../assets/fundo01.png")}
+        />
         <Header />
-        <View>
-          <Text style={styles.text}>PlanetMix</Text>
-        </View>
+
         <View style={styles.descri}>
           <Text style={styles.text02}>
             O sistema solar sempre foi um dos assuntos mais fascinantes para

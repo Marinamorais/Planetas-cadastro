@@ -8,8 +8,9 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   logo: {
-    width: 100,
-    height: 100,
-    marginBottom: 50,
+    fontSize: 30,
+    marginTop: 30,
+    color: "#FFFFFF",
+    fontWeight: "medium",
   },
 });
