@@ -16,7 +16,7 @@ Bem-vindo ao Cadastro de Plantas! Este aplicativo tem como objetivo criar planet
 ## Tela home
 A página inicial do aplicativo inclui uma descrição sobre o app e alguns cards em forma de componentes, acompanhados por imagens dos planetas.
 
-![Tela Home](/assets/tela-home.png)
+![Tela Home](/assets/telahome.png)
 
 ## Tela da lista 
 A tela da lista exibe todos os planetas cadastrados, mostrando suas informações de forma organizada.
