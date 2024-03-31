@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View, Image } from "react-native";
 import { useNavigation, useIsFocused } from "@react-navigation/native";
 
 import styles from "./styles";
@@ -29,7 +29,12 @@ export default function Planets({ route }) {
   }, [isFocused]);
 
   return (
+
     <View style={styles.container}>
+       <Image
+          style={styles.image}
+          source={require("../../../assets/fundo05.png")}
+        />
       <Title title="Planets" />
       <Text>Tela de listagem de todos os usuários</Text>
       {data ? (

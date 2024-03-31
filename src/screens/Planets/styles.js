@@ -3,47 +3,85 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 50,
     alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#f5f5f5",
   },
-  userItem: {
+  planetList: {
+    width: "50%",
+    marginTop: 20,
+  },
+  planetItem: {
+    backgroundColor: "rgba(255, 255, 255, 0.4)",
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 10,
+    elevation: 2,
+  },
+  planetName: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff", 
+  },
+  planetDate: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff", 
+  },
+  planetPrimaryColor: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff", 
+  },
+  planetSecondaryColor: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff", 
+  },
+  planetPopulation: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff", 
+  },
+  planetLocalization: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff", 
+  },
+  planetRuler: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: "center",
+    color: "#fff",
+  },
+  planetActions: {
     flexDirection: "row",
     justifyContent: "space-between",
-    gap: 10,
-    alignItems: "center",
-    padding: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
-  },
-  userDetailButton: {
-    padding: 10,
-    borderRadius: 5,
-    backgroundColor: "#f0f0f0",
-    marginRight: 10,
-  },
-  userActions: {
-    flexDirection: "row",
-    gap: 10,
-  },
-  userName: {
-    fontSize: 16,
-    color: "#333",
-    fontWeight: "bold",
+    marginTop: 10,
   },
   editButton: {
-    padding: 5,
+    backgroundColor: "#2ecc71",
+    padding: 8,
     borderRadius: 5,
-    backgroundColor: "#4CAF50",
-    marginRight: 5,
-    minWidth: 70,
-    alignItems: "center",
   },
-  detailsButton: {
-    padding: 5,
+  deleteButton: {
+    backgroundColor: "#e74c3c",
+    padding: 8,
     borderRadius: 5,
-    backgroundColor: "#2196F3",
-    minWidth: 70,
-    alignItems: "center",
+  },
+  image: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    position: "absolute",
   },
 });
 

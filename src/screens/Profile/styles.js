@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 20,
     fontSize: 20,
-    fontWeight: "medium",
+    fontWeight: "500",
     color: "#FFF",
   },
   containerimg: {
@@ -33,6 +33,40 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     position: "absolute",
   },
+  containercard: {
+    marginTop: 20,
+    paddingHorizontal: 20,
+  },
+  card: {
+    backgroundColor: "#333",
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 10,
+    width: "100%", 
+  },
+  textcard: {
+    fontSize: 15,
+    fontWeight: "500",
+    color: "#FFF",
+  },
+  textcard01: {
+    fontSize: 15,
+    fontWeight: "500",
+    color: "#FFF",
+    marginBottom: 20,
+  },
+  textcard02: {
+    fontSize: 15,
+    fontWeight: "500",
+    color: "#FFF",
+    marginBottom: 10,
+  },
+  card03: {
+    gap: 10,
+    flexDirection: "column",
+    
+  },
+
 });
 
 export default styles;
