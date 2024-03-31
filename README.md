@@ -18,6 +18,26 @@ A página inicial do aplicativo inclui uma descrição sobre o app e alguns card
 
 ![Tela Home](/assets/tela-home.png)
 
+## Tela da lista 
+A tela da lista exibe todos os planetas cadastrados, mostrando suas informações de forma organizada.
+
+![Tela Home](/assets/telalista.png)
+
+## Tela Portifolio
+
+informação da estudante e algumas tecnologias 
+
+![Tela Home](/assets/telaport.png)
+
+## Tela do Cadastro 
+
+A tela de cadastro é onde os usuários podem adicionar novos planetas ao aplicativo. Ela inclui campos para inserir informações detalhadas sobre o planeta, como nome, localização, data de descoberta, cores predominantes, população, informações sobre o governante, entre outros dados relevantes.
+
+![Tela Home](/assets/telacadasto.png)
+
+
+
+
 
 
 
