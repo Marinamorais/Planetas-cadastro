@@ -1,4 +1,4 @@
-  # Cadastro de Plantas 🌱💫
+# Cadastro de Plantas 🌱💫
 
 ## Descrição
 Bem-vindo ao Cadastro de Plantas! Este aplicativo tem como objetivo criar planetas e exibi-los em uma lista, mostrando suas informações.
@@ -13,12 +13,10 @@ Bem-vindo ao Cadastro de Plantas! Este aplicativo tem como objetivo criar planet
 - JavaScript
 - CSS
 
-
-Tela home:
-
+## Tela home
 A página inicial do aplicativo inclui uma descrição sobre o app e alguns cards em forma de componentes, acompanhados por imagens dos planetas.
 
-![Texto Alternativo da Imagem](/assets/tela home.png)
+![Tela Home](/assets/tela-home.png)
 
 
 
